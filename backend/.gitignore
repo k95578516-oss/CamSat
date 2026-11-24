@@ -1,0 +1,26 @@
+# build output
+target/
+*.class
+*.jar
+*.war
+
+# local configuration and secrets
+.env
+.env.*
+!.env.example
+application-local.yml
+application-local.properties
+*.pem
+*.key
+
+# IDE / OS
+.idea/
+*.iml
+.vscode/
+.DS_Store
+Thumbs.db
+
+# local databases and logs
+*.log
+*.mv.db
+*.trace.db

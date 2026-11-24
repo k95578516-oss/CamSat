@@ -1,0 +1,12 @@
+# Production: every value must be supplied through the environment. There are deliberately no defaults.
+spring:
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+camsat:
+  jwt:
+    secret: ${JWT_SECRET}            # at least 32 characters, random
+    allow-ephemeral-secret: false
+  cors:
+    allowed-origins: ${CORS_ALLOWED_ORIGINS}

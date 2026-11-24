@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink-950: #060a13;
+  --color-ink-900: #0a1120;
+  --color-ink-800: #101a2e;
+  --color-ink-700: #18253f;
+  --color-line: #22304a;
+  --color-fg: #e4ecf7;
+  --color-muted: #8fa0bc;
+  --color-accent: #22d3ee;
+  --color-accent-dim: #0e7490;
+  --color-ok: #4ade80;
+  --color-warn: #fbbf24;
+  --color-crit: #f87171;
+  --font-sans: "Segoe UI", "Inter", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "Cascadia Mono", "JetBrains Mono", ui-monospace, "SF Mono", Consolas, monospace;
+}
+
+html, body, #root { height: 100%; }
+body {
+  margin: 0;
+  background: var(--color-ink-950);
+  color: var(--color-fg);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+* { scrollbar-color: var(--color-line) transparent; }
+:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+input, select, textarea, button { font: inherit; }
+.num { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+
+@media print {
+  body { background: #fff; color: #000; }
+  .print-area { color: #000; }
+  .print-area * { color: #000 !important; border-color: #999 !important; background: #fff !important; }
+}
